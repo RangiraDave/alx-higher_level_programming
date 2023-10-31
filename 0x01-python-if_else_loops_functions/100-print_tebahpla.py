@@ -3,8 +3,8 @@ lower = 122
 upper = 89
 
 while lower >= 97 and upper >= 65:
-    print(chr(lower), end="")
-    print(chr(upper), end="")
+    print("{}".format(chr(lower)), end="")
+    print("{}".format(chr(upper)), end="")
 
     lower -= 2
     upper -= 2
