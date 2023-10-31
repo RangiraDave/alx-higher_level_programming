@@ -6,4 +6,4 @@ def uppercase(str):
         if ord(str[i]) >= 97 and ord(str[i]) <= 122:
             chr_list[i] = chr(ord(str[i]) - 32)
         i += 1
-    return "".join(chr_list)
+    print("{}".format("".join(chr_list)))
