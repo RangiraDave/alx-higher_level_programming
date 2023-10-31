@@ -6,7 +6,7 @@ original = number
 
 while number != 0:
     if number == 0:
-        last = 0
+        print("Last digit of 0 is 0 and is 0")
     if number < 0:
         number = -(number)
         last = -(number % 10)
