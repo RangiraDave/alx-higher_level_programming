@@ -5,9 +5,13 @@ number = random.randint(-10000, 10000)
 original = number
 
 while number != 0:
+    if number == 0:
+        last = 0
     if number < 0:
         number = -(number)
-    last = number % 10
+        last = -(number % 10)
+    else:
+        last = number % 10
     if last > 5:
         state = "and is greater than 5"
     if last == 0:
