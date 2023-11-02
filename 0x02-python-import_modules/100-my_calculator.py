@@ -23,6 +23,6 @@ if __name__ == "__main__":
 
         if op == '/':
             print("{:d} {:s} {:d} = {:d}".format(a, op, b, div(a, b)))
-        else:
+        if op != '+' and op != '-' and op != '*' and op != '/':
             print("{}".format("Unknown operator. Available operators: +, -, * and /"))
             exit(1)
