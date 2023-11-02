@@ -5,7 +5,7 @@ import sys
 if __name__ == "__main__":
     if len(sys.argv) != 4:
         print("{}".format("Usage: ./100-my_calculator.py <a> <operator> <b>"))
-        exit (1)
+        exit(1)
 
     else:
         a = int(sys.argv[1])
