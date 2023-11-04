@@ -1,4 +1,4 @@
-This folder contains answers for the following python tasks:
+#This folder contains answers for the following python tasks:
 
 0. Write a function that prints all integers of a list.
 
@@ -215,4 +215,4 @@ Element 2: int
 Element 3: int
 julien@CPython:~/CPython$
 
-#Happy coding#
+##Happy coding
