@@ -6,4 +6,4 @@ def weight_average(my_list=[]):
         ml += row[0] * row[1]
         sm += row[1]
 
-    return float(ml / sm)
+    return ml / sm
