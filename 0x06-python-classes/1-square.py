@@ -3,7 +3,7 @@
 """Difining the Square class."""
 
 
-classSquare:
+class Square:
     """
     The Square class represents a geometric square.
     """
