@@ -2,18 +2,19 @@
 
 class Square:
     """
-    Square class represents a geometric square (like in mathematics).
+    The Square class represents a geometric square.
 
     Attributes:
         __size (int): The size of the square.
 
     Methods:
-        __init__(self, _size): Initialises a new instance of the square.
+        __init__(self, _size): Initializes a new instance of the Square class.
     """
     def __init__(self, _size):
         """
-        Initialises new instance.
+        Initializes a new instance of the Square class.
+
         Args:
-            _size (int): Represents the size of the square.
+            _size (int): The size of the square.
         """
         self._Square__size = _size
