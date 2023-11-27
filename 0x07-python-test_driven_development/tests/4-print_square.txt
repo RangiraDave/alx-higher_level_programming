@@ -1,0 +1,26 @@
+This file contains test cases for print_square function.
+
+
+Importing print_square:
+>>> print_square = __import__('4-print_square').print_square
+
+Testing normal print:
+>>> print_square(2)
+##
+##
+
+Testing for zero size:
+>>> print_square(0)
+
+
+Testing for negative integer:
+>>> print_square(-2)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Testing for negative float number:
+>>> print_square(-3.2)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
