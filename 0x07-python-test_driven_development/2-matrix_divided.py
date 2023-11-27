@@ -1,6 +1,14 @@
 #!/usr/bin/python3
+"""
+This function takes matrix(list of lists)
+and div(int or float).
+"""
+
 
 def matrix_divided(matrix, div):
+    """
+    Function to divide elents of a matrix by div.
+    """
     new_mat = []
     i = 0
 
