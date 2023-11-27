@@ -1,0 +1,60 @@
+These are the test cases of matrix_divided function:
+
+
+Importing matrix_divivded from the 2-matrix_divided.py file:
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+
+Testing with normal matrix:
+>>> matrix_divided([[1, 2, 3],[4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+
+Testing on float numbers:
+>>> matrix_divided([[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]], 3)
+[[0.11, 0.22, 0.33], [0.44, 0.56, 0.67]]
+
+
+Testing with normal negative matrix:
+>>> matrix_divided([[-1, 2, 3],[4, -5, 6]], 3)
+[[-0.33, 0.67, 1.0], [1.33, -1.67, 2.0]]
+
+
+Testing on negative float numbers:
+>>> matrix_divided([[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]], -3)
+[[-0.11, -0.22, -0.33], [-0.44, -0.56, -0.67]]
+
+
+Testing on None integer or float element (tuples):
+>>> matrix_divided([[0.33, 0.67, 1.0], (1.33, 1.67, 2.0)], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Testing on None int or float element(turple):
+>>> matrix_divided(([0.33, 0.67, 1.0], [1.33, 1.67, 2.0]), 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
+Testing division with zero:
+>>> matrix_divided([[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]], 0)
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+
+
+Testing on negative float numbers:
+>>> matrix_divided([[0, 0, 10], [50, 0, 0]], -3)
+[[0.0, 0.0, -3.33], [-16.67, 0.0, 0.0]]
+
+
+Testing for none int or float elements:
+>>> matrix_divided([['a', 2, 'F'],['d', 5, 6]], 3)
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+
