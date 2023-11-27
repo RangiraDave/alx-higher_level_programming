@@ -1,0 +1,42 @@
+This File contains test cases for say_my_name function:
+
+
+Importing say_my_name:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing normal inputs:
+>>> say_my_name("Rangira", "David")
+My name is Rangira David
+
+Testing single name given:
+>>> say_my_name("Dave")
+My name is Dave 
+
+Testing empt name given:
+>>> say_my_name()
+Traceback (most recent call last):
+...
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+Testing None string(ints):
+>>> say_my_name("Rangira", 250)
+Traceback (most recent call last):
+...
+TypeError: last_name must be a string
+
+
+Testing for all ints:
+>>> say_my_name(12, 45)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+Testing for None:
+>>> say_my_name(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+
+
+
