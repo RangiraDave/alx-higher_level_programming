@@ -49,7 +49,7 @@ class Rectangle:
     @property
     def print_symbol(self):
         if self.__print_symbol is None:
-            return '#'#Rectangle.print_symbol
+            return '#'
         else:
             return self.__print_symbol
 
