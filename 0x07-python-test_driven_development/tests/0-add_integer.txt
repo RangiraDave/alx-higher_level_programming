@@ -45,10 +45,11 @@ Traceback (most recent call last):
 TypeError: a must be an integer
 
 
->>> add_integer(float(NaN), 1)
+Float overflow:
+>>> add_integer(float('NaN'), 1)
 Traceback (most recent call last):
 ...
-NameError: name 'NaN' is not defined
+ValueError: cannot convert float NaN to integer
 
 >>> add_integer(1)
 99
