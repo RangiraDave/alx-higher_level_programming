@@ -19,4 +19,3 @@ class BaseGeometry(object):
 
         self.name = name
         self.value = value
-
