@@ -1,0 +1,33 @@
+Test cases for BaseGeometry class:
+
+Importing the class from its module:
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Creating an instance:
+>>> bg = BaseGeometry()
+
+Trying on normal case:
+>>> bg.integer_validator("Uburebure", 48)
+
+Another normal case:
+>>> bg.integer_validator("width", 23)
+
+None integer:
+>>> bg.integer_validator("my_name", "Not_int")
+Traceback (most recent call last):
+...
+TypeError: <name> must be an integer
+
+Trying Negative value:
+>>> bg.integer_validator("my_name", -23)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+
+Trying Zero value:
+>>> bg.integer_validator("my_name", 0)
+Traceback (most recent call last):
+...
+ValueError: <name> must be greater than 0
+
+
