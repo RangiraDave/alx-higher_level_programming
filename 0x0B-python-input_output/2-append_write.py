@@ -5,5 +5,5 @@
 def append_write(filename="", text=""):
     """The function definition."""
 
-    with open(filename, 'r+', encoding="utf-8") as f:
+    with open(filename, 'a', encoding="utf-8") as f:
         return f.write(str(text))
