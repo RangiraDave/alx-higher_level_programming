@@ -30,4 +30,44 @@ Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
+Test for None:
+>>> bg.integer_validator("age", None)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
 
+Test for dictionary:
+>>> bg.integer_validator("age", {2, 4})
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+Test for boolian:
+>>> bg.integer_validator("age", True)
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+Test for list:
+>>> bg.integer_validator("age", [3, 5])
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+Test for tuple:
+>>> bg.integer_validator("age", (3,))
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+Test for string:
+>>> bg.integer_validator("age", "7")
+Traceback (most recent call last):
+...
+TypeError: age must be an integer
+
+Test for one argument:
+>>> bg.integer_validator("age")
+Traceback (most recent call last):
+...
+TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
