@@ -30,6 +30,12 @@ Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
+>>> bg1 = BaseGeometry()
+>>> bg1.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
 Testing for None:
 >>> bg.integer_validator("my_name", None)
 Traceback (most recent call last):
