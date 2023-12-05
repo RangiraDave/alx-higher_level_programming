@@ -4,6 +4,5 @@
 
 def read_file(filename=""):
     """This function uses with"""
-    with open(filename, 'r', encoding = 'utf-8') as f:
-        for i in f:
-            print(i)
+    with open(filename, 'r', encoding='utf-8') as f:
+        print(f.read())
