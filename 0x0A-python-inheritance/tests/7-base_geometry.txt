@@ -16,18 +16,18 @@ None integer:
 >>> bg.integer_validator("my_name", "Not_int")
 Traceback (most recent call last):
 ...
-TypeError: <name> must be an integer
+TypeError: my_name must be an integer
 
 Trying Negative value:
 >>> bg.integer_validator("my_name", -23)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: my_name must be greater than 0
 
 Trying Zero value:
 >>> bg.integer_validator("my_name", 0)
 Traceback (most recent call last):
 ...
-ValueError: <name> must be greater than 0
+ValueError: my_name must be greater than 0
 
 
