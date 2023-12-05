@@ -7,30 +7,36 @@ Creating an instance:
 >>> bg = BaseGeometry()
 
 Trying on normal case:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("Uburebure", 48)
 
 Another normal case:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("width", 23)
 
 None integer:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", "Not_int")
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Trying Negative value:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", -23)
 Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
 Trying Zero value:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", 0)
 Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
 Testing for float:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", 4.2)
 Traceback (most recent call last):
 ...
@@ -44,42 +50,49 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
 Testing for None:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", None)
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for dictionary:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", {2, 4})
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for boolian:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", True)
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for list:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", [3, 5])
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for tuple:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", (3,))
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for string:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name", "7")
 Traceback (most recent call last):
 ...
 TypeError: my_name must be an integer
 
 Testing for one argument:
+>>> bg = BaseGeometry()
 >>> bg.integer_validator("my_name")
 Traceback (most recent call last):
 ...
