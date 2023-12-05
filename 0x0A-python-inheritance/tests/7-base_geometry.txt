@@ -30,6 +30,13 @@ Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
+Testing for float:
+>>> bg.integer_validator("my_name", 4.2)
+Traceback (most recent call last):
+...
+TypeError: my_name must be an integer
+
+Testing for area:
 >>> bg1 = BaseGeometry()
 >>> bg1.area()
 Traceback (most recent call last):
