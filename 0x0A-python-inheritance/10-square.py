@@ -14,6 +14,8 @@ class Square(Rectangle):
         BaseGeometry.integer_validator(self, "size", size)
 
     def area(self):
+        """Function to compute and return area of the square."""
+
         return pow(self.__size, 2)
 
     def __str__(self):
