@@ -30,44 +30,44 @@ Traceback (most recent call last):
 ...
 ValueError: my_name must be greater than 0
 
-Test for None:
->>> bg.integer_validator("age", None)
+Testing for None:
+>>> bg.integer_validator("my_name", None)
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for dictionary:
->>> bg.integer_validator("age", {2, 4})
+Testing for dictionary:
+>>> bg.integer_validator("my_name", {2, 4})
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for boolian:
->>> bg.integer_validator("age", True)
+Testing for boolian:
+>>> bg.integer_validator("my_name", True)
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for list:
->>> bg.integer_validator("age", [3, 5])
+Testing for list:
+>>> bg.integer_validator("my_name", [3, 5])
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for tuple:
->>> bg.integer_validator("age", (3,))
+Testing for tuple:
+>>> bg.integer_validator("my_name", (3,))
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for string:
->>> bg.integer_validator("age", "7")
+Testing for string:
+>>> bg.integer_validator("my_name", "7")
 Traceback (most recent call last):
 ...
-TypeError: age must be an integer
+TypeError: my_name must be an integer
 
-Test for one argument:
->>> bg.integer_validator("age")
+Testing for one argument:
+>>> bg.integer_validator("my_name")
 Traceback (most recent call last):
 ...
 TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
