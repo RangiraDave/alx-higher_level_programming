@@ -7,6 +7,7 @@ class Rectangle(Base):
     """Class Rectangle is defined here."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        Base.reset_nb_objects()
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -72,4 +73,8 @@ class Rectangle(Base):
     def area(self):
         """Function to return area of the rectangle."""
         return self.__width * self.__height
+
+    def display(self):
+        for i in range(self.__height):
+            print("#" * self.__width)
 

@@ -14,6 +14,12 @@ class Base():
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+
+    @classmethod
+    def reset_nb_objects(cls):
+        """Reset the __nb_objects attribute."""
+        cls.__nb_objects = 0
+
 #    @property
 #    def id(self):
 #        """Function to retrieve the id."""

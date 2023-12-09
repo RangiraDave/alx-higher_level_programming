@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Test suit for Rectangle class."""
 from models.rectangle import Rectangle
+from models.base import Base
 import unittest
 
 
@@ -49,6 +50,11 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(a.area(), 3)
 
 
+
+    """Testing display() method."""
+    def test_4_and_1(self):
+        a = Rectangle(4, 1)
+        self.assertEqual(a.display(), None)
 
 if __name__ == '__main__':
     unittest.main()
