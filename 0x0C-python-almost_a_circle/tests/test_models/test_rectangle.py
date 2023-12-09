@@ -56,5 +56,15 @@ class TestRectangle(unittest.TestCase):
         a = Rectangle(4, 1)
         self.assertEqual(a.display(), None)
 
+
+
+    """Testing special methon str."""
+    def test_str_representation(self):
+        rectangle = Rectangle(10, 2, 5, 10)
+        expected_string = "[Rectangle] (1) 5/10 - 10/2"
+        self.assertEqual(str(rectangle), expected_string)
+
+
+
 if __name__ == '__main__':
     unittest.main()
