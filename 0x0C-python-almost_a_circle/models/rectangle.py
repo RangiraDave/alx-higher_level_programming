@@ -20,6 +20,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """This function sets value of width."""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -47,6 +48,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Function to set the alue of x."""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -60,9 +62,14 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Function to set value of y."""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Function to return area of the rectangle."""
+        return self.__width * self.__height
 

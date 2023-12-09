@@ -29,5 +29,26 @@ class TestRectangle(unittest.TestCase):
         a = Rectangle(3, 5, 6, 7)
         self.assertEqual(a.x, 6)
 
+
+
+    """Testing where error exceptions are thrown."""
+
+
+
+    """Testing area of rectangle."""
+    def test_for_only_w_and_h_given(self):
+        a = Rectangle(2, 3)
+        self.assertEqual(a.area(), 6)
+
+    def test_for_three_values_given(self):
+        a = Rectangle(3, 5, 7)
+        self.assertEqual(a.area(), 15)
+
+    def test_for_all_values_given(self):
+        a = Rectangle(1, 3, 4, 7, 8)
+        self.assertEqual(a.area(), 3)
+
+
+
 if __name__ == '__main__':
     unittest.main()
