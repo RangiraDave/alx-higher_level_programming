@@ -75,8 +75,24 @@ class Rectangle(Base):
         return self.__width * self.__height
 
     def display(self):
+        """Function to print # and handles x and y."""
+        for _ in range(self.__y):
+            print("")
         for i in range(self.__height):
+            print(" " * self.__x, end='')
             print("#" * self.__width)
 
     def __str__(self):
-        return f"[{__class__.__name__}] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+        w = self.__width
+        h = self.__height
+        name = __class__.__name__
+        return f"[{name}] ({self.id}) {self.__x}/{self.__y} - {w}/{h}"
+
+
+    def update(self, *args):
+        if args and len(args) > 0:
+            attrib = ['id', 'width', 'height', 'x', 'y']
+            for i in range(len(args)):
+                setattr(self, attrib[i], args[i])
+        else:
+            pass

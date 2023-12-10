@@ -66,5 +66,20 @@ class TestRectangle(unittest.TestCase):
 
 
 
+    """Tests for display that handles x and y."""
+
+
+
+
+    """Testing update() method."""
+    def test_update(self):
+        a = Rectangle(2, 2, 2, 2, 2)
+        self.assertEqual(a.area(), 4)
+
+    def test_update1(self):
+        a = Rectangle(89, 78)
+        self.assertEqual(a.width, 89)
+
+
 if __name__ == '__main__':
     unittest.main()
