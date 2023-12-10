@@ -71,7 +71,7 @@ class TestRectangle(unittest.TestCase):
 
 
 
-    """Testing update() method."""
+    """Testing update() method with args and kwargs."""
     def test_update(self):
         a = Rectangle(2, 2, 2, 2, 2)
         self.assertEqual(a.area(), 4)
@@ -79,6 +79,11 @@ class TestRectangle(unittest.TestCase):
     def test_update1(self):
         a = Rectangle(89, 78)
         self.assertEqual(a.width, 89)
+
+    def test_kwargs(self):
+        a = Rectangle(1, 2, 3, 5, 6)
+        a = Rectangle(width = 6, y = 3, height = 89)
+        self.assertEqual(a.y, 3)
 
 
 if __name__ == '__main__':
