@@ -78,12 +78,13 @@ class TestRectangle(unittest.TestCase):
 
     def test_update1(self):
         a = Rectangle(89, 78)
-        self.assertEqual(a.width, 89)
+        a.update(145)
+        self.assertEqual(a.id, 145)
 
     def test_kwargs(self):
         a = Rectangle(1, 2, 3, 5, 6)
-        a = Rectangle(width = 6, y = 3, height = 89)
-        self.assertEqual(a.y, 3)
+        a.update(width = 6, y = 3, height = 89)
+        self.assertEqual(a.height, 89)
 
 
 if __name__ == '__main__':

@@ -24,7 +24,7 @@ class Base():
 #    def id(self):
 #        """Function to retrieve the id."""
 #        return self.__id
-#
+
 #    @id.setter
 #    def id(self, value):
 #        """This function sets the is when provided."""
