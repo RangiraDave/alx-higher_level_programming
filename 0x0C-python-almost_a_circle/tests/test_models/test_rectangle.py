@@ -9,7 +9,7 @@ class TestRectangle(unittest.TestCase):
     """Definition of the TestRectangle class."""
 
     def setUp(self):
-        pass
+        Base.reset_nb_objects()
 
     def tearDown(self):
         pass
@@ -85,6 +85,17 @@ class TestRectangle(unittest.TestCase):
         a = Rectangle(1, 2, 3, 5, 6)
         a.update(width = 6, y = 3, height = 89)
         self.assertEqual(a.height, 89)
+
+
+
+    """Testing to_dictionary function."""
+    def test_to_dictionary(self):
+        a = Rectangle(2, 1)
+        d = a.to_dictionary()
+        b = Rectangle(4, 6)
+        b.update(**d)
+        self.assertEqual(b.width, 2)
+
 
 
 if __name__ == '__main__':

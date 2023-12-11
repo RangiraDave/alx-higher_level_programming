@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Class Rectangle is defined here."""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        Base.reset_nb_objects()
+#        Base.reset_nb_objects()
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -96,4 +96,22 @@ class Rectangle(Base):
                 setattr(self, attrib[i], args[i])
         else:
             for key, value in kwargs.items():
-                setattr(self, key, value)
+                if hasattr(self, key):
+                    setattr(self, key, value)
+
+    def to_dictionary(self):
+        """Function to return dict representation of rectangle"""
+        i = self.id
+        w = self.width
+        h = self.height
+        x = self.x
+        y = self.y
+        dic = {
+                'id': i,
+                'width': w,
+                'height': h,
+                'x': x,
+                'y': y
+                }
+        return dic
+
