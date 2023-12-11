@@ -18,7 +18,6 @@ class TestSquare(unittest.TestCase):
         a = Square(3, 6)
         self.assertEqual(a.height, 3)
 
-
     """Testing size setter module."""
     def Test_setter(self):
         a = Square(5)

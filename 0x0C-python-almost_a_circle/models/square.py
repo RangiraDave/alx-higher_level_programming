@@ -2,13 +2,13 @@
 """CLass Square that iniherits form our Rectangle class."""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """Square class definition."""
     def __init__(self, size, x=0, y=0, id=None):
         width = size
         height = size
         super().__init__(width, height, x, y, id)
-
 
     def __str__(self):
         name = __class__.__name__
@@ -48,4 +48,3 @@ class Square(Rectangle):
                 'y': self.y
                 }
         return dic
-

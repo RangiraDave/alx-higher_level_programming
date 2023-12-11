@@ -15,7 +15,6 @@ class Base():
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-
     @classmethod
     def reset_nb_objects(cls):
         """Reset the __nb_objects attribute."""
@@ -26,6 +25,7 @@ class Base():
         if list_dictionaries is None or list_dictionaries is []:
             return []
         return json.dumps(list_dictionaries)
+
     @classmethod
     def save_to_file(cls, list_objs):
         fileName = str(cls.__name__) + '.json'
@@ -34,7 +34,7 @@ class Base():
 
         j_list = [i.to_dictionary() for i in list_objs]
         j_string = cls.to_json_string(j_list)
-        with open(fileName, 'w+', encoding = 'utf-8') as f:
+        with open(fileName, 'w+', encoding='utf-8') as f:
             f.write(j_string)
 
     @staticmethod

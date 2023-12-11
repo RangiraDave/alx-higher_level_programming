@@ -5,9 +5,8 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class Rectangle is defined here."""
-
     def __init__(self, width, height, x=0, y=0, id=None):
-#        Base.reset_nb_objects()
+        """Its constructor."""
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -83,13 +82,14 @@ class Rectangle(Base):
             print("#" * self.__width)
 
     def __str__(self):
+        """String to return strings."""
         w = self.__width
         h = self.__height
         name = __class__.__name__
         return f"[{name}] ({self.id}) {self.__x}/{self.__y} - {w}/{h}"
 
-
     def update(self, *args, **kwargs):
+        """The updater function."""
         if args and len(args) > 0:
             attrib = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
@@ -114,4 +114,3 @@ class Rectangle(Base):
                 'y': y
                 }
         return dic
-

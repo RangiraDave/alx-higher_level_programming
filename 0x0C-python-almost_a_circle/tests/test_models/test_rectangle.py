@@ -30,11 +30,7 @@ class TestRectangle(unittest.TestCase):
         a = Rectangle(3, 5, 6, 7)
         self.assertEqual(a.x, 6)
 
-
-
     """Testing where error exceptions are thrown."""
-
-
 
     """Testing area of rectangle."""
     def test_for_only_w_and_h_given(self):
@@ -49,14 +45,10 @@ class TestRectangle(unittest.TestCase):
         a = Rectangle(1, 3, 4, 7, 8)
         self.assertEqual(a.area(), 3)
 
-
-
     """Testing display() method."""
     def test_4_and_1(self):
         a = Rectangle(4, 1)
         self.assertEqual(a.display(), None)
-
-
 
     """Testing special methon str."""
     def test_str_representation(self):
@@ -64,12 +56,7 @@ class TestRectangle(unittest.TestCase):
         expected_string = "[Rectangle] (1) 5/10 - 10/2"
         self.assertEqual(str(rectangle), expected_string)
 
-
-
     """Tests for display that handles x and y."""
-
-
-
 
     """Testing update() method with args and kwargs."""
     def test_update(self):
@@ -83,10 +70,8 @@ class TestRectangle(unittest.TestCase):
 
     def test_kwargs(self):
         a = Rectangle(1, 2, 3, 5, 6)
-        a.update(width = 6, y = 3, height = 89)
+        a.update(width=6, y=3, height=89)
         self.assertEqual(a.height, 89)
-
-
 
     """Testing to_dictionary function."""
     def test_to_dictionary(self):
@@ -95,7 +80,6 @@ class TestRectangle(unittest.TestCase):
         b = Rectangle(4, 6)
         b.update(**d)
         self.assertEqual(b.width, 2)
-
 
 
 if __name__ == '__main__':

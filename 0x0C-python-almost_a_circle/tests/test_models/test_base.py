@@ -7,7 +7,6 @@ import unittest
 
 class TestBase(unittest.TestCase):
     """The TestBase class is defined here."""
-
     def setUp(self):
         pass
 
@@ -42,8 +41,6 @@ class TestBase(unittest.TestCase):
         self.assertEqual(type(json_s), str)
 
     """TEsting saave_to_file() function."""
-
-
 
 
 if __name__ == '__main__':
