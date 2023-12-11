@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Test suit for the Base class."""
 from models.base import Base
+from models.rectangle import Rectangle
 import unittest
 
 
@@ -33,6 +34,12 @@ class TestBase(unittest.TestCase):
         a3 = Base(23)
         self.assertEqual(a3.id, 23)
 
+    """Testing to_json_string() function"""
+    def test_to_json_string(self):
+        a = Rectangle(1, 3)
+        dl = a.to_dictionary()
+        json_s = Base.to_json_string([dl])
+        self.assertEqual(type(json_s), str)
 
 
 if __name__ == '__main__':

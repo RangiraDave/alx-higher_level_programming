@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """This is the base class."""
+import json
 
 
 class Base():
@@ -20,12 +21,7 @@ class Base():
         """Reset the __nb_objects attribute."""
         cls.__nb_objects = 0
 
-#    @property
-#    def id(self):
-#        """Function to retrieve the id."""
-#        return self.__id
-
-#    @id.setter
-#    def id(self, value):
-#        """This function sets the is when provided."""
-#        self.__id = value
+    def to_json_string(list_dictionaries):
+        if list_dictionaries is None or list_dictionaries is []:
+            return []
+        return json.dumps(list_dictionaries)
