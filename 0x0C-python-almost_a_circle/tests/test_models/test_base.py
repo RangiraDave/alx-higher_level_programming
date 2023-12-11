@@ -41,6 +41,10 @@ class TestBase(unittest.TestCase):
         json_s = Base.to_json_string([dl])
         self.assertEqual(type(json_s), str)
 
+    """TEsting saave_to_file() function."""
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
