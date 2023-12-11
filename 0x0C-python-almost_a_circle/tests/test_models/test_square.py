@@ -46,6 +46,14 @@ class TestSquare(unittest.TestCase):
         a.update(12, 21, 23, 32)
         self.assertEqual(a.y, 32)
 
+    """Testing to_dictionary() function."""
+    def test_to_dictionary(self):
+        a = Square(1, 2)
+        b = Square(3, 4)
+        d = a.to_dictionary()
+        b.update(**d)
+        self.assertEqual(b.size, 1)
+
 
 if __name__ == '__main__':
     unittest.main()
