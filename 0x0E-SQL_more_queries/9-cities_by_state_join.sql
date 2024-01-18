@@ -1,3 +1,6 @@
 -- Script to display all cities in the database.
 
-SELECT cities.id AS i, cities.name, states.name FROM cities ORDER BY i ASC NATURAL JOIN states;
+SELECT cities.id, cities.name, states.name
+FROM cities
+NATURAL JOIN states
+ORDER BY cities.id ASC;
