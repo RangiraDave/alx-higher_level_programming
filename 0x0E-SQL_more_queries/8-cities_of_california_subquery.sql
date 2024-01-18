@@ -1,4 +1,4 @@
 -- Script to display cities of California that can be found
 -- in the database.
 
-SELECT id, name FROM cities WHERE states.name = 'California' ORDER BY cities.id ASC;
+SELECT id, name FROM cities, states WHERE cities.state_id = states.id AND states.name = 'California' ORDER BY cities.id ASC;
