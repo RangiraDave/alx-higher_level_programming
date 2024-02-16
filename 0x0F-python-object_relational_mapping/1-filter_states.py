@@ -25,8 +25,10 @@ def main(username, password, database):
 
     rows = cursor.fetchall()
 
+    i = 0
     for row in rows:
-        print(row)
+        print("{}, {}"format(i, row))
+        i++
 
     cursor.close()
     db.close()
@@ -34,5 +36,4 @@ def main(username, password, database):
 
 if __name__ == "__main__":
     username, password, database = sys.argv[1:]
-
     main(username, password, database)
