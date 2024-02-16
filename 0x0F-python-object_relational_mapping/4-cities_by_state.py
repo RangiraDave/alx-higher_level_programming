@@ -11,32 +11,27 @@ def main(username, password, database):
     Function to handle the execution of the queries.
     """
 
-    try:
-        db = MySQLdb.connect(
-                host='localhost',
-                port=3306,
-                user=username,
-                passwd=password,
-                db=database
-                )
-        cursor = db.cursor()
-        cursor.execute("SELECT cities.id, cities.name, \
-                states.name FROM cities \
-                JOIN states ON cities.state_id = states.id \
-                ORDER BY cities.id")
-        rows = cursor.fetchall()
+    db = MySQLdb.connect(
+            host='localhost',
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database
+            )
+    cursor = db.cursor()
+    cursor.execute("SELECT cities.id, cities.name, \
+            states.name FROM cities \
+            JOIN states ON cities.state_id = states.id \
+            ORDER BY cities.id")
+    rows = cursor.fetchall()
 
-        for row in rows:
-            print(row)
+    for row in rows:
+        print(row)
 
-    except MySQLdb.Error as e:
-        print(f"Error: {e}")
-
-    finally:
-        if cursor:
-            cursor.close()
-        if db:
-            db.close()
+    if cursor:
+        cursor.close()
+    if db:
+        db.close()
 
 
 if __name__ == "__main__":
