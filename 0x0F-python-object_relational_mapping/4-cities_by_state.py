@@ -21,7 +21,7 @@ def main(username, password, database):
                 )
         cursor = db.cursor()
         cursor.execute("SELECT * FROM cities \
-                JOIN states ON state_id.id = states.id \
+                JOIN states ON cities.state_id = states.id \
                 ORDER BY cities.id")
         rows = cursor.fetchall()
 
