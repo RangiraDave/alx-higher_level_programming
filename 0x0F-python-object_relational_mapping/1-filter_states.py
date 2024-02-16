@@ -28,7 +28,7 @@ def main(username, password, database):
     i = 0
     for row in rows:
         print("{}, {}".format(i, row))
-        i++
+        i += 1
 
     cursor.close()
     db.close()
