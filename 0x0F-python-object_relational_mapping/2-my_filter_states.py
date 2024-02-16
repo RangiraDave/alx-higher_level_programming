@@ -25,17 +25,18 @@ def main(username, password, database, sname):
 
     rows = cursor.fetchall()
 
-    if not rows:
-        print("No records found")
-    else:
-        for row in rows:
-            print(row)
+    for row in rows:
+        print(row)
 
     cursor.close()
     db.close()
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Usage: ./scriptName arguments")
+        sys.exit(1)
+
     username, password, database, sname = sys.argv[1:]
 
     main(username, password, database, sname)
