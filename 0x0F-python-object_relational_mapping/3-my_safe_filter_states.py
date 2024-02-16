@@ -3,7 +3,7 @@ import MySQLdb
 
 def main(username, password, database, sname):
     """
-    Function to select all states from database hbtn_0e_0_usa.
+    Function that handles the SQL Injection.
     """
 
     db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
