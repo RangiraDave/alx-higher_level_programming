@@ -33,6 +33,10 @@ def main(username, password, database, sname):
 
 
 if __name__ == "__main__":
-    username, password, database, sname = sys.argv[1:]
+    if len(sys.argv) != 5:
+        print("Usage: ./2-my_filter_states.py <username> \
+                <password> <database> <sname>")
+        sys.exit(1)
 
+    username, password, database, sname = sys.argv[1:]
     main(username, password, database, sname)
