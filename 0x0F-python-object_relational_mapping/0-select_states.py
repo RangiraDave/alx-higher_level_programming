@@ -3,12 +3,18 @@
 import sys
 import MySQLdb
 
+
 def main(username, password, database):
     """
     Function to select all states from database hbtn_0e_0_usa.
     """
 
-    db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
+    db = MySQLdb.connect(
+            host="localhost",
+            port=3306,
+            user=username,
+            passwd=password,
+            db=database)
 
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id")
