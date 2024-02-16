@@ -27,7 +27,7 @@ def main(username, password, database):
 
     i = 0
     for row in rows:
-        print("{}, {}"format(i, row))
+        print("{}, {}".format(i, row))
         i++
 
     cursor.close()
