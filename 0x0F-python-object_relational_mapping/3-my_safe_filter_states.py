@@ -34,14 +34,10 @@ def main(username, password, database, sname):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print(
                 "Usage: ./my_safe_filter_states.py\
                         <username> <password> <database>")
-        sys.exit(1)
-
-    if type(sys.argv[3]) is not str:
-        print("name to search must be a string type.")
         sys.exit(1)
 
     username, password, database, sname = sys.argv[1:]
