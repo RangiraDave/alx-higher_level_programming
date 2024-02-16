@@ -32,5 +32,9 @@ def main(username, password, database):
 
 
 if __name__ == "__main__":
+    if len(sys.argv) != 4:
+        print("Argments must be 3")
+        sys.exit(1)
+
     username, password, database = sys.argv[1:]
     main(username, password, database)
