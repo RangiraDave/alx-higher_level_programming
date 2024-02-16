@@ -28,10 +28,8 @@ def main(username, password, database):
     for row in rows:
         print(row)
 
-    if cursor:
-        cursor.close()
-    if db:
-        db.close()
+    cursor.close()
+    db.close()
 
 
 if __name__ == "__main__":
