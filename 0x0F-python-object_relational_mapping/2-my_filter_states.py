@@ -33,10 +33,6 @@ def main(username, password, database, sname):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
-        print("Usage: ./scriptName arguments")
-        sys.exit(1)
-
     username, password, database, sname = sys.argv[1:]
 
     main(username, password, database, sname)
