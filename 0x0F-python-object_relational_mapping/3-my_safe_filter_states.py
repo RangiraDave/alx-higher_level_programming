@@ -35,7 +35,9 @@ def main(username, password, database, sname):
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: ./my_safe_filter_states.py <username> <password> <database>")
+        print(
+                "Usage: ./my_safe_filter_states.py\
+                        <username> <password> <database>")
         sys.exit(1)
 
     if type(sys.argv[3]) is not str:
