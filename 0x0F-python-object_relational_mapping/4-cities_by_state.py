@@ -28,6 +28,15 @@ def main(username, password, database):
     else:
         print("No cities found")
 
+    except MySQLdb.Error as e:
+        print(f"Error: {e}")
+
+    finally:
+        if cursor:
+            cursor.close()
+        if db:
+            db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
