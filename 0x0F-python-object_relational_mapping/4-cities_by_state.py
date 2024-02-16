@@ -11,22 +11,23 @@ def main(username, password, database):
     Function to handle the execution of the queries.
     """
 
-    db = MySQLdb.connect(
-            host='localhost',
-            port=3306,
-            user=username,
-            passwd=password,
-            db=database
-            )
-    cursor = db.cursor()
-    cursor.execute("SELECT * FROM cities ORDER BY id")
-    rows = cursor.fetchall()
+    try:
+        db = MySQLdb.connect(
+                host='localhost',
+                port=3306,
+                user=username,
+                passwd=password,
+                db=database
+                )
+        cursor = db.cursor()
+        cursor.execute("SELECT * FROM cities ORDER BY id")
+        rows = cursor.fetchall()
 
-    if rows:
-        for row in rows:
-            print(row)
-    else:
-        print("No cities found")
+        if rows:
+            for row in rows:
+                print(row)
+        else:
+            print("No cities found")
 
     except MySQLdb.Error as e:
         print(f"Error: {e}")
