@@ -21,7 +21,7 @@ def main(username, password, database, sname):
 
     cursor = db.cursor()
     cursor.execute(
-            "SELECT * FROM states WHERE name = {} ORDER BY id".format(sname))
+            "SELECT * FROM states WHERE name == {} ORDER BY id".format(sname))
 
     rows = cursor.fetchall()
 
