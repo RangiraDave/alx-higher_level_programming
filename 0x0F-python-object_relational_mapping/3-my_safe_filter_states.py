@@ -1,3 +1,9 @@
+#!/usr/bin/python3
+"""
+Script to display all states matching name
+without worrying about the SQL Injection.
+"""
+
 import sys
 import MySQLdb
 

@@ -1,12 +1,15 @@
 #!/usr/bin/python3
-
+"""
+Script to list all  states with name that matching name given.
+"""
 import sys
 import MySQLdb
 
 
 def main(username, password, database, sname):
     """
-    Function to select all states from database hbtn_0e_0_usa.
+    Function to select all states from database hbtn_0e_0_usa
+    with name equal to name given as an argument.
     """
 
     db = MySQLdb.connect(
