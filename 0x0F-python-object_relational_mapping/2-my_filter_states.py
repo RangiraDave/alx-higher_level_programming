@@ -25,8 +25,11 @@ def main(username, password, database, sname):
 
     rows = cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    if not rows:
+        print("No records found")
+    else:
+        for row in rows:
+            print(row)
 
     cursor.close()
     db.close()
