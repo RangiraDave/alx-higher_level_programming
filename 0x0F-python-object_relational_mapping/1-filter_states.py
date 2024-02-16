@@ -24,11 +24,8 @@ def main(username, password, database):
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id")
 
     rows = cursor.fetchall()
-
-    i = 0
     for row in rows:
-        print("{}, {}".format(i, row))
-        i += 1
+        print(row))
 
     cursor.close()
     db.close()
