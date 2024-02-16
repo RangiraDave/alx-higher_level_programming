@@ -20,7 +20,9 @@ def main(username, password, database):
                 db=database
                 )
         cursor = db.cursor()
-        cursor.execute("SELECT * FROM cities ORDER BY id")
+        cursor.execute("SELECT * FROM cities \
+                JOIN states ON cities.id = states.id \
+                ORDER BY cities.id")
         rows = cursor.fetchall()
 
         for row in rows:
