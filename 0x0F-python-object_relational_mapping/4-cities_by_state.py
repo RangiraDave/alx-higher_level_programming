@@ -16,14 +16,14 @@ def main(username, password, database):
             port=3306,
             user=username,
             passwd=password,
-            db=atabase
+            db=database
             )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM cities ORDER BY id")
     rows = cursor.fetchall()
 
     if rows:
-        for row in row:
+        for row in rows:
             print(row)
     else:
         print("No cities found")
