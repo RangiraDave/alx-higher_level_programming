@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""
+This is the script to execute task 0.
+"""
 import sys
 import MySQLdb
 
