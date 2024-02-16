@@ -23,11 +23,8 @@ def main(username, password, database):
         cursor.execute("SELECT * FROM cities ORDER BY id")
         rows = cursor.fetchall()
 
-        if rows:
-            for row in rows:
-                print(row)
-        else:
-            print("No cities found")
+        for row in rows:
+            print(row)
 
     except MySQLdb.Error as e:
         print(f"Error: {e}")
