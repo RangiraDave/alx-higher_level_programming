@@ -24,7 +24,7 @@ def main(username, password, database, state):
     cursor.execute("SELECT cities.name FROM cities WHERE \
             cities.state_id = (SELECT state.id \
             WHERE state.name = '{}') \
-            ORDER BY citied.id ASC".format(state))
+            ORDER BY cities.id ASC".format(state))
 
     rows = cursor.fetchall()
     for row in rows:
