@@ -22,7 +22,7 @@ def main(username, password, database, state):
 
     cursor = db.cursor()
     cursor.execute("SELECT cities.name FROM cities WHERE \
-            cities.state_id = (SELECT state.id \
+            cities.state_id = (SELECT state.id FROM state\
             WHERE state.name = '{}') \
             ORDER BY cities.id ASC".format(state))
 
