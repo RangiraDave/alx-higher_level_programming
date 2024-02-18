@@ -27,13 +27,10 @@ def main(username, password, database, state):
             ORDER BY citied.id ASC".format(state))
 
     rows = cursor.fetchall()
-    i = 0
-    for cit in rows:
-        i += 1
-        if i != len(rows) - 2:
-            print(cit, end=', ')
-
-        print(cit)
+    for row in rows:
+        print(row)
+        if row != rows[len(rows) - 1]:
+            print(row, end=', ')
 
 
 if __name__ == "__main__":
