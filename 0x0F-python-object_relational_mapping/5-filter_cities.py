@@ -39,6 +39,8 @@ def main(username, password, database, state):
     finally:
         if db:
             db.close()
+        if cursor:
+            cursor.close()
 
 
 if __name__ == "__main__":
