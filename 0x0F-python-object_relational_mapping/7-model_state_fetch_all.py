@@ -16,8 +16,8 @@ def main(username, password, database):
     """
 
     host = "localhost"
-    connection = "mysql+mysqldb://'{}':'{}'@'{}':3306/\
-            '{}'".format(username, password, host, database)
+    connection = "mysql+mysqldb://{}:{}@{}:3306/\
+            {}".format(username, password, host, database)
 
     engine = create_engine(connection)
 
