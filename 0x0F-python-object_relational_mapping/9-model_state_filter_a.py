@@ -10,14 +10,17 @@ from model_state import Base, State
 
 
 if __name__ == "__main__":
-    """this is makes main"""
+    """
+    Function to handle its logic via main.
+    """
+
     username = argv[1]
     password = argv[2]
     database = argv[3]
     host = 'localhost'
     port = 3306
-    connection = f'mysql+mysqldb://{username}:\
-        {password}@{host}:{port}/{database}'
+    connection = 'mysql+mysqldb://{}:{}@{}:{}/{}'.
+    format(username, password, host, port, database)
 
     engine = create_engine(connection)
 
