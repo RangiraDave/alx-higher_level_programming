@@ -3,6 +3,7 @@
 Script to list cities of the state given as argument.
 """
 
+import sys
 import MySQLdb
 
 
@@ -33,3 +34,12 @@ def main(username, password, database, state):
             print(cit, end=', ')
 
         print(cit)
+
+
+if __name__ == "__main__":
+    if len(sys.args) != 4:
+        print("Remember the Usage?")
+        sys.exit(1)
+
+    username, password, database, state = sys.args[1:]
+    main(username, password, database, state)
