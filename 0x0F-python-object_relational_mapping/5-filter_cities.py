@@ -21,9 +21,9 @@ def main(username, password, database, state):
             )
 
     cursor = db.cursor()
-    cursor.execute("SELECT cities.name FROM cities \
-            INNER OUTER states ON cities.state_id = state.id \
-            WHERE state.name = '{}' \
+    cursor.execute("SELECT cities.name FROM cities WHERE \
+            cities.state_id = (SELECT state.id \
+            WHERE state.name = '{}') \
             ORDER BY citied.id ASC".format(state))
 
     rows = cursor.fetchall()
