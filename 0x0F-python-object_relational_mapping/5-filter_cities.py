@@ -36,9 +36,9 @@ def main(username, password, database, state):
 
 
 if __name__ == "__main__":
-    if len(sys.args) != 5:
+    if len(sys.argv) != 5:
         print("Remember the Usage?")
         sys.exit(1)
 
-    username, password, database, state = sys.args[1:]
+    username, password, database, state = sys.argv[1:]
     main(username, password, database, state)
