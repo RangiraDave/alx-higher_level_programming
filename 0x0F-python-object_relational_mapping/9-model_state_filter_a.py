@@ -19,8 +19,8 @@ if __name__ == "__main__":
     database = argv[3]
     host = 'localhost'
     port = 3306
-    connection = 'mysql+mysqldb://{}:{}@{}:{}/{}'.
-    format(username, password, host, port, database)
+    connection = 'mysql+mysqldb://{}:{}@{}:{}/{}'.format(username,
+            password, host, port, database)
 
     engine = create_engine(connection)
 
