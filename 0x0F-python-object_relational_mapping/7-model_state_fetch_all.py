@@ -4,7 +4,7 @@ Function to fetch all states
 """
 
 import sys
-import sqlalchemy
+# import sqlalchemy
 from sqlalchemy import create_engine, Column, Integer, String, MetaData
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
