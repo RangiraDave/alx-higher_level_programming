@@ -30,7 +30,9 @@ def main(username, password, database, state):
     for row in rows:
         print(row)
         if row != rows[len(rows) - 1]:
-            print(row, end=', ')
+            print(end=', ')
+
+    print()
 
 
 if __name__ == "__main__":
