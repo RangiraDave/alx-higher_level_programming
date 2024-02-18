@@ -36,7 +36,7 @@ def main(username, password, database, state):
 
 
 if __name__ == "__main__":
-    if len(sys.args) != 4:
+    if len(sys.args) != 5:
         print("Remember the Usage?")
         sys.exit(1)
 
