@@ -21,7 +21,7 @@ def main(username, password, database):
 
     engine = create_engine(connection)
 
-    Session = sessionmaker(connection)
+    Session = sessionmaker(bind=engine)
     session = Session()
 
     states = session.query(State).order_by(State.id.asc()).all()
