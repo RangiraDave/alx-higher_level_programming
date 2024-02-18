@@ -37,6 +37,5 @@ if __name__ == "__main__":
         print("Usage: ./4-cities_by_states.py <username> \
                 <password> <database>")
         sys.exit(1)
-
     username, password, database = sys.argv[1:]
     main(username, password, database)
