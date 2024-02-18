@@ -23,16 +23,21 @@ def main(username, password, database, state):
     cursor = db.cursor()
     cursor.execute("SELECT name FROM cities WHERE \
             state_id = (SELECT id FROM state\
-            WHERE name = '{}') \
-            ORDER BY cities.id ASC".format(state))
+            WHERE name = %s) \
+            ORDER BY cities.id ASC", (state))
 
     rows = cursor.fetchall()
-    for row in rows:
-        print(row)
-        if row != rows[len(rows) - 1]:
-            print(end=', ')
+    city_names = [row[0] for row in rows]
+    print(', '.join(city_names))
 
     print()
+
+    except MySQLdb.Error as e:
+        print("MySQLdb Error: {}".format(e))
+
+    finally:
+        if db:
+            db.close()
 
 
 if __name__ == "__main__":
