@@ -1,8 +1,12 @@
 #!/usr/bin/python3
-# Script to find a peak element in a list of integers.
+"""
+Script to find a peak element in a list of integers.
+"""
 
 def find_peak(list_of_integers):
-    # Function to find a peak
+    """
+    Function to find a peak
+    """
 
     lst = list_of_integers
 
