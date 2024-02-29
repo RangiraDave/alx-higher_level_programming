@@ -1,0 +1,2 @@
+# Time complext of my implementaion
+O(n)
