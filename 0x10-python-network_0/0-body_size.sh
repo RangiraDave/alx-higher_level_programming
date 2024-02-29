@@ -3,7 +3,7 @@
 # Send a request to it
 # And print its body size.
 
-if [ "$#" -ne 2 ]; then
+if [ "$#" -ne 1 ]; then
 	echo "Usage: ./0-body_size.sh <URL/IP Adress>"
 	exit 1
 fi
