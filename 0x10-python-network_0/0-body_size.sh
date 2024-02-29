@@ -9,6 +9,6 @@ if [ "$#" -ne 2 ]; then
 fi
 
 url="$1"
-size=$(curl -sI "$url" | grep "content-length" | awk "{print $2}")
+size=$(curl -sI "$url" | grep -i "content-length" | awk "{print $2}")
 
 echo "$size"
