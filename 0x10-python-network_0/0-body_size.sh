@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 # Script to read URL from the args
 # Send a request to it
 # And print its body size.
