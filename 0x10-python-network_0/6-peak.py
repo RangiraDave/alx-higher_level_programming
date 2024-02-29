@@ -12,6 +12,3 @@ def find_peak(list_of_integers):
         return l[0]
     s = sorted(l)
     return s[len(s) - 1]
-
-if __name__ == "__main__":
-    find_peak(list_of_integers)
