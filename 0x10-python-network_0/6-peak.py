@@ -4,11 +4,11 @@
 def find_peak(list_of_integers):
     # Function to find a peak
 
-    l = list_of_integers
+    lst = list_of_integers
 
-    if not l or len(l) is []:
+    if not lst or len(lst) is []:
         return None
-    if l[:-1] is l[len(l):0]:
-        return l[0]
-    s = sorted(l)
+    if lst[:-1] is lst[len(lst):0]:
+        return lst[0]
+    s = sorted(lst)
     return s[len(s) - 1]
