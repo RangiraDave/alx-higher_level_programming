@@ -20,9 +20,7 @@ def error_code(url):
             page = resp.read()
             print(page.decode('utf-8'))
     except HTTPError as e:
-        print("Error code:", e.code)
-    except URLError as e:
-        print("Error code:", e.reason)
+        print("Error code:", e.status)
 
 
 if __name__ == "__main__":

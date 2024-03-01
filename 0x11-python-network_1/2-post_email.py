@@ -14,15 +14,12 @@ def post_email(url, email):
     Function to handle the logic
     """
 
-    data = urllib.parse.urlencode({'Email': email})
-    data = data.encode('ascii')
+    dta = urllib.parse.urlencode({'email': email})
+    dta = dta.encode('ascii')
 
-    with urllib.request.urlopen(url, data=data) as resp:
-        if resp.status == 200:
-            content = resp.read()
-            print("Your email is:", content.decode('utf-8'))
-        else:
-            print("Error: Request failed with status code", resp.status)
+    with urllib.request.urlopen(url, data=dta) as resp:
+        content = resp.read()
+        print("Your email is:", content.decode('utf-8'))
 
 
 if __name__ == "__main__":
