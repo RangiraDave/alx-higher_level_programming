@@ -9,14 +9,14 @@ from urllib.parse import urlencode
 from urllib.request import urlopen, Request
 from urllib.error import HTTPError
 
+
 def post_email(url, email):
     """
     Function to handle the logic
     """
 
-    values = {'email' : email}
+    values = {'email': email}
     data = urlencode(values).encode('ascii')
-    #req = Request(url, data)
 
     with urlopen(url, data=data) as resp:
         if resp.status == 200:
