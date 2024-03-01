@@ -1,9 +1,11 @@
 # This directory contains tasks about python network using urllib and requests python packages
 
 ## Reasorses:
-![HOWTO Fetch Internet Resources Using urllib Package](https://docs.python.org/3/howto/urllib2.html#handling-exceptions)
-![Quickstart with Requests package](https://requests.readthedocs.io/en/latest/)
-![Requests package](https://pypi.org/project/requests/)
+[HOWTO Fetch Internet Resources Using urllib Package](https://docs.python.org/3/howto/urllib2.html#handling-exceptions)
+
+[Quickstart with Requests package](https://requests.readthedocs.io/en/latest/)
+
+[Requests package](https://pypi.org/project/requests/)
 
 ## Learning objectives:
 General
