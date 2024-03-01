@@ -5,9 +5,8 @@ URL also passed as argument and display response body
 """
 
 from sys import argv
-from urllib.parse import urlencode
-from urllib.request import urlopen, Request
-from urllib.error import HTTPError
+import urllib.parse
+import urllib.request
 
 
 def post_email(url, email):
@@ -16,13 +15,16 @@ def post_email(url, email):
     """
 
     values = {'email': email}
-    data = urlencode(values).encode('ascii')
+    data = urllib.parse.urlencode(values)
+    data = data.encode('ascii')
 
-    with urlopen(url, data=data) as resp:
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as resp:
         if resp.status == 200:
-            print("Your email is:", resp.read().decode('utf-8'))
+            content = resp.read()
+            print("Your email is:", content.decode('utf-8'))
         else:
-            print("Error: Request failed with status code", resp.status)
+            print("Error: Request failed with status code", content.status)
 
 
 if __name__ == "__main__":
