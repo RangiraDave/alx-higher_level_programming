@@ -6,7 +6,7 @@ response body and all handles HTTPError.
 
 from sys import argv
 from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+from urllib.error import URLError, HTTPError
 
 
 def error_code(url):
@@ -17,11 +17,12 @@ def error_code(url):
     req = Request(url)
     try:
         with urlopen(req) as resp:
-            print(resp.read().decode('utf-8'))
+            page = resp.read()
+            print(page.decode('utf-8'))
     except HTTPError as e:
         print("Error code:", e.code)
     except URLError as e:
-        print("Error code:", e.code)
+        print("Error code:", e.reason)
 
 
 if __name__ == "__main__":
