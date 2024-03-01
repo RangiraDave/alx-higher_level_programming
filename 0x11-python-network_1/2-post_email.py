@@ -14,8 +14,7 @@ def post_email(url, email):
     Function to handle the logic
     """
 
-    values = {'email': email}
-    data = urllib.parse.urlencode(values)
+    data = urllib.parse.urlencode({'Email': email})
     data = data.encode('ascii')
 
     with urllib.request.urlopen(url, data=data) as resp:
