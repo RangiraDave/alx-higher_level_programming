@@ -8,5 +8,13 @@ import sys
 import requests
 
 
-r = requests.get(sys.argv[1])
-print(r.headers["X-Request-Id"])
+def fetch_url(url):
+    """
+    Function to handle the logic
+    """
+    r = requests.get(url)
+    print(r.headers["X-Request-Id"])
+
+
+if __name__ == "__main__":
+    fetch_url(sys.argv[1])
