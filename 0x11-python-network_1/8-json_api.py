@@ -15,16 +15,15 @@ def json_check(letter):
 
     q = letter if letter 1 else ''
 
-    r = requests.post('http://0.0.0.0:5000/search_user', json={'q': q})
-
-    if not r.json():
-        print("No result" if q else "Not a valid JSON")
-    else:
-        id_name = r.json().get('id'), r.json().get('name')
-        if None in id_name:
+    with requests.post('http://0.0.0.0:5000/search_user', data={'q': q}) as resp:
+        try:
+            page = resp.json()
+            if page:
+                print("[{}] {}".format(page.get('id'), page.get('name')
+            else:
+                print("No result")
+        except ValueError:
             print("Not a valid JSON")
-        else:
-            print("[{}] {}".format(*id_name))
 
 
 if __name__ == "__main__":
