@@ -6,7 +6,7 @@ a parameter and checks if body is properly JSON formatted.
 
 from sys import argv
 import requests
-import json
+
 
 q = argv[1] if len(argv) > 1 else ''
 
