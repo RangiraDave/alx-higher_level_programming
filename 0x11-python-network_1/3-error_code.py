@@ -19,7 +19,7 @@ def error_code(url):
         with urlopen(req) as resp:
             print(resp.read().decode('utf-8'))
     except HTTPError as e:
-        print("Error code:", e.status_code)
+        print("Error code:", e.status)
 
 
 if __name__ == "__main__":
