@@ -203,10 +203,10 @@ guillaume@ubuntu:~/0x11$
 
 
 9. My GitHub!
-Write a Python script that takes your GitHub credentials (username and password) and uses the ![GitHub API](https://intranet.alxswe.com/rltoken/LjPfW9hW_55YwijGVofyTQ) to display your id
-- You must use ![Basic Authentication](https://intranet.alxswe.com/rltoken/ECKUmLiAk_k2G0NPzqdykQ) with a ![personal access token as password](https://intranet.alxswe.com/rltoken/Kz4UM-V_bcwrcWajaCAVtQ) to access to your information (only read:user permission is needed)
+Write a Python script that takes your GitHub credentials (username and password) and uses the [GitHub API](https://intranet.alxswe.com/rltoken/LjPfW9hW_55YwijGVofyTQ) to display your id
+- You must use [Basic Authentication](https://intranet.alxswe.com/rltoken/ECKUmLiAk_k2G0NPzqdykQ) with a [personal access token as password](https://intranet.alxswe.com/rltoken/Kz4UM-V_bcwrcWajaCAVtQ) to access to your information (only read:user permission is needed)
 - The first argument will be your username
-- The second argument will be your password (in your case, a ![personal access token as password](https://intranet.alxswe.com/rltoken/Kz4UM-V_bcwrcWajaCAVtQ))
+- The second argument will be your password (in your case, a [personal access token as password](https://intranet.alxswe.com/rltoken/Kz4UM-V_bcwrcWajaCAVtQ))
 - You must use the package requests and sys
 - You are not allowed to import packages other than requests and sys
 - You don’t need to check arguments passed to the script (number or type)
@@ -248,7 +248,7 @@ a76f5189f6cec4b3e6d9035e2b55dcda6050dfdb: Ryuta Kamizono
 8f0d8551893789f26e5d6b82ccef00779296818f: Rafael Mendonça França
 guillaume@ubuntu:~/0x11$
 ```
-Be careful: only 60 requests by hour by IP for unauthenticated requests ![Rate limit](https://intranet.alxswe.com/rltoken/S2DhgB0xP5IPy_93vBcRhw)
+Be careful: only 60 requests by hour by IP for unauthenticated requests [Rate limit](https://intranet.alxswe.com/rltoken/S2DhgB0xP5IPy_93vBcRhw)
 
 
 ## HappyCodding!
