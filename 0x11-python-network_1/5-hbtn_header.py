@@ -4,9 +4,9 @@ Script to send arequest to URL given as an argument
 and print the value of X-Request-Id from the headers' response
 """
 
-from sys import argv
+import sys
 import requests
 
 
-r = requests.get(argv[1])
+r = requests.get(sys.argv[1])
 print(r.headers["X-Request-Id"])
