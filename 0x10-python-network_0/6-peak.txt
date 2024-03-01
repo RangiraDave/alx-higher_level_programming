@@ -1,2 +1,2 @@
-# Time complext of my implementaion
+O(log(n))
 O(n)
