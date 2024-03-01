@@ -18,13 +18,12 @@ def post_email(url, email):
     data = urllib.parse.urlencode(values)
     data = data.encode('ascii')
 
-    req = urllib.request.Request(url, data)
-    with urllib.request.urlopen(req) as resp:
+    with urllib.request.urlopen(url, data=data) as resp:
         if resp.status == 200:
             content = resp.read()
             print("Your email is:", content.decode('utf-8'))
         else:
-            print("Error: Request failed with status code", content.status)
+            print("Error: Request failed with status code", resp.status)
 
 
 if __name__ == "__main__":
