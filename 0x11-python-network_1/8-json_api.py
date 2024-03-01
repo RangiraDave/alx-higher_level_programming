@@ -20,3 +20,7 @@ else:
         print("Not a valid JSON")
     else:
         print("[{}] {}".format(*id_name))
+
+
+if __name__ == "__main__":
+    pass
