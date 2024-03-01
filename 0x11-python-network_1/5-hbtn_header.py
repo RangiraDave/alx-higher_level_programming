@@ -12,7 +12,7 @@ def fetch_url(url):
     """
     Function to handle the logic
     """
-    r = requests.post(url)
+    r = requests.get(url)
     print(r.headers["X-Request-Id"])
 
 
