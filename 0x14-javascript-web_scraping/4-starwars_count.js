@@ -10,7 +10,7 @@ if (!process.argv[2]) {
 }
 
 const url = process.argv[2];
-let movieCount = 0;
+// const movieCount = 0;
 
 request(url, (err, response, body) => {
   if (err) {
@@ -18,7 +18,7 @@ request(url, (err, response, body) => {
   }
   const movies = JSON.parse(body).results;
   const wedgeMovies = movies.filter(movie => {
-    return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18')
+    return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18');
   });
 
   console.log(`${wedgeMovies.length}`);
