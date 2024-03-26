@@ -21,5 +21,5 @@ request(url, (err, response, body) => {
     return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18')
   });
 
-  console.log(`${wedgeAntillesMovies.length}`);
+  console.log(`${wedgeMovies.length}`);
 });

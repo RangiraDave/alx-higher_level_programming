@@ -1,0 +1,12 @@
+{
+  "name": "0x14-javascript-web_scraping",
+  "version": "1.0.0",
+  "description": "## Resources: - [Working with JSON data](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON) - [Create JSON object with jsonbin.io](http://jsonbin.io/) - [request module](https://github.com/request/request) - [Modern JS](https://github.com/mbeaudru/modern-js-cheatsheet)",
+  "main": "0-readme.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
