@@ -9,7 +9,7 @@ function readFileContent (filename) {
       console.error(`Error reading the file: ${err}`);
       return;
     }
-    console.log(`${data}\n`);
+    console.log(`${data}`);
   });
 }
 
