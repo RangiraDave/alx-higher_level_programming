@@ -2,28 +2,36 @@
 // Script that computes the number of tasks completed by user id.
 
 const request = require('request');
+
+if (!process.argv[2]) {
+  console.log('Please provide the URL as an argument.');
+  process.exit(1);
+}
+
 const url = process.argv[2];
 
 request(url, function (err, response, body) {
   if (err) {
-    console.log(err);
-  } else if (response.statusCode === 200) {
-    const completed = {};
-    const tasks = JSON.parse(body);
+    console.error(err);
+    return;
+  }
 
-    for (const t in tasks) {
-      const task = tasks[t];
-      if (task.completed === true) {
-        if (completed[task.userId] === undefined) {
+  if (response.statusCode === 200) {
+    const tasks = JSON.parse(body);
+    const completed = {};
+
+    tasks.forEach(task => {
+      if (task.completed) {
+        if (!completed[task.userId]) {
           completed[task.userId] = 1;
         } else {
           completed[task.userId]++;
         }
       }
-      console.log('{task.userId}: {completed}');
-    }
-    // console.log(`{task.userId}: {completed}`);
+    });
+
+    console.log(completed);
   } else {
-    console.log('An error status code: ' + response.statusCode);
+    console.log('An error occurred. Status code: ' + response.statusCode);
   }
 });
