@@ -13,8 +13,4 @@ function writeFileContent (filename, content) {
 
 const filename = process.argv[2];
 const content = process.argv[3];
-if (!filename || !content) {
-  console.error('Provide a file name and content as an argument.');
-} else {
-  writeFileContent(filename, content);
-}
+writeFileContent(filename, content);
