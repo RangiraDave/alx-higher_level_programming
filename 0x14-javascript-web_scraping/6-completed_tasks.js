@@ -20,7 +20,7 @@ request(url, function (err, response, body) {
           completed[task.userId]++;
         }
       }
-      console.log(`{task.userId}: {completed}`);
+      console.log('{task.userId}: {completed}');
     }
     // console.log(`{task.userId}: {completed}`);
   } else {
