@@ -17,9 +17,10 @@ request(url, (err, response, body) => {
     console.log(err);
   }
   const movies = JSON.parse(body).results;
-  const wedgeMovies = movies.filter(movie => {
-    return movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18');
+  console.log(results.reduce((count, movie) => {
+      return movie.characters.find((character) => character.endsWith('/18/'))
+        ? count + 1
+        : count;
+    }, 0));
   });
-
-  console.log(`${wedgeMovies.length}`);
 });
