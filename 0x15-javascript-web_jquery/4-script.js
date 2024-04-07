@@ -1,14 +1,14 @@
-const $headerElem = $('header');
+const $headerElement = $('header');
 const $divRedHeader = $('DIV#toggle_header');
 
 $divRedHeader.on('click', () => {
-  const currentClass = $headerElem.attr('class');
+  const currentClass = $headerElement.attr('class');
 
   if (currentClass === 'green') {
     $headerElem.toggleClass(`${currentClass} red`);
   }
 
   if (currentClass === 'red') {
-    $headerElem.toggleClass(`${currentClass} green`);
+    $headerElement.toggleClass(`${currentClass} green`);
   }
 });

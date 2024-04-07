@@ -1,6 +1,6 @@
-const $listElem = $('ul.my_list');
-const $addItemElem = $('div#add_item');
+const $listElement = $('ul.my_list');
+const $addItemElement = $('div#add_item');
 
-$addItemElem.on('click', () => {
-  $listElem.append('<li>Item</li>');
+$addItemElement.on('click', () => {
+  $listElement.append('<li>Item</li>');
 });
