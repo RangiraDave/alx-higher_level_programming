@@ -1,0 +1,1 @@
+["\n", "Dave", "\n", 888] was an empty lineLets see if this is appended to the File.('\n', 'Dave', '\n', 888)["\n", "Dave", "\n", 888]

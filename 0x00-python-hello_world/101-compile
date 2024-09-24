@@ -1,0 +1,4 @@
+#!/bin/bash
+python3 -m compileall "$PYFILE" -b
+#PYFILEc="$(dirname "$PYFILE")/__pycache__/$(basename "$PYFILE" .py).cpython-$(python3 -c 'import sys; print(sys.version_info.major*10 + sys.version_info.minor)').pyc"
+echo "Compiling $PYFILEc ..."
